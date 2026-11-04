@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Central de Agentes Local</title>
+    <link rel="stylesheet" href="/static/styles.css?v=2">
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">POC LOCAL · OLLAMA + CREWAI</p>
+        <h1>Central de Agentes</h1>
+        <p>Converse com o orquestrador. Especialistas são criados só para a missão atual e encerrados ao final.</p>
+        <div class="connection" aria-label="Configuração do Ollama">
+          <div><span>Máquina Ollama</span><strong id="ollama-host">Carregando…</strong></div>
+          <div><span>Endereço configurado</span><strong id="ollama-url">Carregando…</strong></div>
+        </div>
+      </section>
+      <section class="layout">
+        <div class="chat panel">
+          <div class="panel-title"><span>Orquestrador</span><small id="status">Disponível</small></div>
+          <div id="messages" class="messages">
+            <article class="message assistant">Olá. Qual resultado você quer planejar? Nesta POC não há acesso a Jira ou WordPress.</article>
+          </div>
+          <form id="mission-form">
+            <label for="message">Orientação para o orquestrador</label>
+            <textarea id="message" placeholder="Ex.: planeje uma automação para revisar demandas de conteúdo e listar riscos." required></textarea>
+            <button id="send" type="submit">Iniciar missão</button>
+          </form>
+        </div>
+        <aside class="sidebar">
+          <section class="panel">
+            <div class="panel-title">Equipe temporária</div>
+            <div id="agents" class="agents"><p class="empty">Nenhum agente ativo.</p></div>
+          </section>
+          <section class="panel">
+            <div class="panel-title">Linha do tempo</div>
+            <ol id="events" class="events"><li>Aguardando uma orientação.</li></ol>
+          </section>
+        </aside>
+      </section>
+    </main>
+    <script src="/static/app.js?v=2"></script>
+  </body>
+</html>
