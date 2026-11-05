@@ -94,6 +94,19 @@ OLLAMA_HOST=192.168.1.8:11434 ollama list
 
 7. Abra `http://127.0.0.1:8787` no navegador da Máquina B.
 
+## Desenvolvimento assistido
+
+Configuração para Claude Code, Cursor (Composer) e Codex:
+
+| Artefato | Uso |
+|----------|-----|
+| [AGENTS.md](AGENTS.md) | Entrada para Codex e agentes genéricos |
+| [CLAUDE.md](CLAUDE.md) | Contexto ao abrir só este repo |
+| [backlog/](backlog/) | Épicos e tasks (`epic-NNN`) |
+| [plans/](plans/) | Planos confirmados no chat |
+
+No monorepo Lactalis (`lactalis/`), regras adicionais ficam na raiz do workspace ([`CLAUDE.md`](../CLAUDE.md), `.cursor/rules/will-agents-wpress-*.mdc`) — **não** são commitadas neste remote.
+
 ## Jira somente leitura
 
 O agente Leitor Jira usa o arquivo configurado em `JIRA_ENV_FILE` ou, por padrão, `/home/will/Downloads/env`. Esse arquivo deve permanecer fora do Git e conter `JIRA_BASE_URL`, `JIRA_EMAIL` e `JIRA_API_TOKEN`.
